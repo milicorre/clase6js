@@ -27,7 +27,22 @@ console.log(busquedap)
 const busquedac = tienda.filter(servicio => servicio.zona === "cejas");
 console.log(busquedac)
 
+
+
 const nuevoValor = tienda.map (valor => valor.precio * 1.21 );
 console.log (nuevoValor)
 
+const ordenarPrecio = (valor) => {
+    tienda.sort ((a,b) => {
+        if (a[valor] > b [valor]){
+            return 1;
+        }
+        if (a[valor] < b [valor]){
+            return -1
+        } 
+        return 0
 
+    })
+}
+ordenarPrecio("precio")
+console.log(tienda)
